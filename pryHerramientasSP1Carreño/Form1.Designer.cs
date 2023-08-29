@@ -56,9 +56,10 @@
             // 
             // txtDatos
             // 
-            this.txtDatos.Location = new System.Drawing.Point(29, 13);
+            this.txtDatos.Location = new System.Drawing.Point(12, 13);
+            this.txtDatos.Multiline = true;
             this.txtDatos.Name = "txtDatos";
-            this.txtDatos.Size = new System.Drawing.Size(432, 20);
+            this.txtDatos.Size = new System.Drawing.Size(461, 159);
             this.txtDatos.TabIndex = 2;
             // 
             // btnCargar
@@ -69,6 +70,7 @@
             this.btnCargar.TabIndex = 3;
             this.btnCargar.Text = "Crear Archivo";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // Form1
             // 

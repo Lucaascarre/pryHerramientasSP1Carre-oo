@@ -44,5 +44,27 @@ namespace pryHerramientasSP1Carreño
             }
             SrManejoArchivo.Close();
         }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StreamWriter swCrearArchivo = new StreamWriter("miArchivo", true);
+
+                swCrearArchivo.WriteLine(txtDatos.Text);
+
+                swCrearArchivo.Close();
+
+                MessageBox.Show("Almacenado");
+                txtDatos.Text = "";
+                txtDatos.Focus();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error Fatal" + ex.Message);
+
+            }
+        }
     }
 }
